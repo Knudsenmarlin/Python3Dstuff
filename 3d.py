@@ -26,7 +26,7 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
 points = []
 points.append(np.matrix([int(0 + offset_x), int(1 + offset_y), int(0 + offset_z)]))
-points.append(np.matrix([int(-1 + offset_x), int(0 + offset_y), int(-1 + offset_z)]))
+points.append(np.matrix([int(-1 + offset_x), int(0 + offset_y), int(1 + offset_z)]))
 points.append(np.matrix([int(-1 + offset_x), int(0 + offset_y), int(-1 + offset_z)]))
 points.append(np.matrix([int(1 + offset_x), int(0 + offset_y), int(1 + offset_z)]))
 points.append(np.matrix([int(1 + offset_x), int(0 + offset_y), int(-1 + offset_z)]))
