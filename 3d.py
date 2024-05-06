@@ -27,7 +27,7 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 points = []
 points.append(np.matrix([int(0 + offset_x), int(1 + offset_y), int(0 + offset_z)]))
 points.append(np.matrix([int(-1 + offset_x), int(0 + offset_y), int(-1 + offset_z)]))
-points.append(np.matrix([int(-1 + offset_x), int(0 + offset_y), int(1 + offset_z)]))
+points.append(np.matrix([int(-1 + offset_x), int(0 + offset_y), int(-1 + offset_z)]))
 points.append(np.matrix([int(1 + offset_x), int(0 + offset_y), int(1 + offset_z)]))
 points.append(np.matrix([int(1 + offset_x), int(0 + offset_y), int(-1 + offset_z)]))
 
@@ -69,7 +69,7 @@ def project():
     for point in points:
         reshaped = point.reshape((3, 1))
         rotated2d = np.dot(rotate_y(globalAngle), reshaped)
-        rotated2d = np.dot(rotate_x(globalAngle * 3), rotated2d)
+        rotated2d = np.dot(rotate_x(globalAngle), rotated2d)
         rotated2d = np.dot(rotate_z(globalAngle), rotated2d)
 
         projected2d = np.dot(projection_matrix, rotated2d)
